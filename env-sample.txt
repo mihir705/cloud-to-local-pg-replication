@@ -1,0 +1,6 @@
+CLOUD_HOST=HOST_URL
+CLOUD_PORT=5432
+CLOUD_DB=postgres
+CLOUD_USER=repl_user
+CLOUD_PASSWORD=repl_password
+CLOUD_PUBLICATION=pub_all_tables
