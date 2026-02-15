@@ -14,7 +14,7 @@ The goal is to ensure:
 
 ---
 
-# 🏗 Architecture Diagram (ASCII)
+# 🏗 Architecture Diagram
 
 ```
                 ┌─────────────────────────────┐
