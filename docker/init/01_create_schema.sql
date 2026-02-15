@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS public.users (
+  id BIGSERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  updated_at TIMESTAMPTZ DEFAULT now()
+);
+

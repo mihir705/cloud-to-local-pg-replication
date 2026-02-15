@@ -1,0 +1,21 @@
+services:
+  local_postgres:
+    image: postgres:17
+    container_name: local_postgres_subscriber
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: local_admin
+      POSTGRES_PASSWORD: local_admin_password
+      POSTGRES_DB: localdb
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      - ./meta:/meta
+      - ./docker/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U local_admin -d localdb"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
